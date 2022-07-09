@@ -10,5 +10,6 @@ public class Test {
         System.out.println("冲突1");
         System.out.println("冲突2");
         System.out.println("冲突3");
+        System.out.println("冲突4");
     }
 }
