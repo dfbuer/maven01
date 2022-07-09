@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+<!--    pom模型版本，不用管-->
+  <modelVersion>4.0.0</modelVersion>
+
+<!--    组织id-->
+  <groupId>org.example</groupId>
+<!--    项目id-->
+  <artifactId>maven01</artifactId>
+<!--    版本号：release表示完成版，snapshot表示开发版-->
+  <version>1.0-SNAPSHOT</version>
+<!--    web工程打包为war，java工程打包为jar-->
+  <packaging>war</packaging>
+
+<!--  构建-->
+  <build>
+<!--    设置插件-->
+    <plugins>
+<!--      具体插件位置-->
+      <plugin>
+        <groupId>org.apache.tomcat.maven</groupId>
+        <artifactId>tomcat7-maven-plugin</artifactId>
+        <version>2.2</version>
+<!--        自定义端口号-->
+        <configuration>
+<!--          访问端口-->
+          <port>80</port>
+<!--          访问路劲-->
+          <path>/</path>
+        </configuration>
+      </plugin>
+
+    </plugins>
+
+  </build>
+
+
+<!--    管理所需所有依赖-->
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.12</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+</project>
